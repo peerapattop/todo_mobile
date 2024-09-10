@@ -63,7 +63,7 @@ class TodoScreen extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.delete, color: Colors.red),
                     onPressed: () {
-                      // ฟังก์ชันสำหรับลบ task
+                      context.read<TodoProvider>().removeTodo(index);
                     },
                   ),
                 ],
