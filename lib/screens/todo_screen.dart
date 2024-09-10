@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_mobile/providers/todo_provider.dart';
+import 'package:todo_mobile/screens/add_screen.dart';
 
 class TodoScreen extends StatelessWidget {
   const TodoScreen({super.key});
@@ -72,7 +73,12 @@ class TodoScreen extends StatelessWidget {
           color: Colors.white,
         ),
         onPressed: () {
-          // ฟังก์ชันสำหรับเพิ่ม task
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => AddScreen(),
+            ),
+          );
         },
       ),
     );
