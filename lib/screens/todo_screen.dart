@@ -34,10 +34,23 @@ class TodoScreen extends StatelessWidget {
             ),
             child: ListTile(
               contentPadding: const EdgeInsets.all(16),
-              leading: const Icon(
-                Icons.check_circle_outline,
-                color: Colors.green,
-                size: 30,
+              leading: Container(
+                width: 30,
+                height: 30,
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    '${index + 1}',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
               title: Text(
                 tasks[index],
