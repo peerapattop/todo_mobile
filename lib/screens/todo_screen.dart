@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_mobile/providers/todo_provider.dart';
 import 'package:todo_mobile/screens/add_screen.dart';
+import 'package:todo_mobile/screens/edit_screen.dart';
 
 class TodoScreen extends StatelessWidget {
   const TodoScreen({super.key});
@@ -51,7 +52,12 @@ class TodoScreen extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.edit, color: Colors.blue),
                     onPressed: () {
-                      // ฟังก์ชันสำหรับแก้ไข task
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => EditScreen(id: index),
+                        ),
+                      );
                     },
                   ),
                   IconButton(
